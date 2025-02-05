@@ -33,22 +33,6 @@ Copy
 dotnet restore
 Configure o banco de dados:
 
-Crie um banco de dados chamado AuthCookieDb no MySQL.
-
-Execute o script SQL abaixo para criar a tabela de usuários e inserir um usuário de exemplo:
-
-sql
-Copy
-CREATE DATABASE IF NOT EXISTS AuthCookieDb;
-USE AuthCookieDb;
-
-CREATE TABLE IF NOT EXISTS Users (
-    Id INT AUTO_INCREMENT PRIMARY KEY,
-    Username VARCHAR(50) NOT NULL,
-    Password VARCHAR(255) NOT NULL
-);
-
-INSERT INTO Users (Username, Password) VALUES ('user', 'password');
 Atualize a string de conexão no arquivo AppDbContext.cs com as credenciais do seu banco de dados:
 
 csharp
@@ -65,7 +49,7 @@ dotnet run
 A aplicação estará disponível em http://localhost:5017.
 
 Testando a API
-Você pode testar a API usando o Swagger UI ou ferramentas como o Postman.
+Você pode testar a API usando o Swagger UI.
 
 Swagger UI
 Acesse http://localhost:5017/swagger no navegador.
@@ -82,6 +66,6 @@ Copy
   "username": "user",
   "password": "password"
 }
-Dados Protegidos: GET /api/data
+Dados Protegidos: GET /api/data (se retornar 200 é porque deu certo)
 
-Logout: POST /api/auth/logout
+Logout: POST /api/auth/logout 
