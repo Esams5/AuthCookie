@@ -60,12 +60,14 @@ Login: POST /api/auth/login
 
 Body:
 
-json
-Copy
+json Copy
+
 {
   "username": "user",
   "password": "password"
 }
+
 Dados Protegidos: GET /api/data (se retornar 200 é porque deu certo)
+
 
 Logout: POST /api/auth/logout 
