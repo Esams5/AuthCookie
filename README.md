@@ -1,4 +1,5 @@
 AuthCookieApi
+
 Este é um projeto de exemplo de uma API .NET com autenticação por cookies e integração com MySQL. Ele demonstra como configurar autenticação por cookies em uma aplicação .NET e como proteger endpoints com autenticação.
 
 Pré-requisitos
