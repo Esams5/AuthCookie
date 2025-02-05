@@ -8,7 +8,7 @@ namespace AuthCookieApi.Controller;
 public class DataController : ControllerBase
 {
     [HttpGet]
-    [Authorize] // Requer autenticação
+    [Authorize] 
     public IActionResult GetData()
     {
         return Ok(new { message = "This is protected data!" });

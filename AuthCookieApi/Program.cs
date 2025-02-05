@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Adicionar serviços do Swagger
+
 builder.Services.AddEndpointsApiExplorer(); 
 builder.Services.AddSwaggerGen();
 
@@ -18,7 +18,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/api/auth/logout";
     });
 
-// Adicionar o DbContext
+
 builder.Services.AddDbContext<AppDbContext>();
 
 builder.Services.AddControllers();
