@@ -1,10 +1,13 @@
-using AuthCookieApi.Data;
+using AuthCookieApi;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.EntityFrameworkCore;
+using AuthCookieApi.Data;
+using AuthCookieApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-builder.Services.AddEndpointsApiExplorer(); 
+// Adicionar serviços do Swagger
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Adicionar autenticação por cookies
@@ -18,8 +21,13 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.LogoutPath = "/api/auth/logout";
     });
 
-
-builder.Services.AddDbContext<AppDbContext>();
+// Adicionar o DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("DefaultConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))
+    )
+);
 
 builder.Services.AddControllers();
 
@@ -33,8 +41,13 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Registrar o middleware de validação de sessão
+app.UseMiddleware<SessionValidationMiddleware>();
+
 app.UseAuthentication();
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.Run();

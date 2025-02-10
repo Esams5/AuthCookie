@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samuel\\Desktop\\AuthCookie\\AuthCookieApi\\AuthCookieApi.csproj": {}
+    "/home/esdras/AuthCookie/AuthCookieApi/AuthCookieApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samuel\\Desktop\\AuthCookie\\AuthCookieApi\\AuthCookieApi.csproj": {
+    "/home/esdras/AuthCookie/AuthCookieApi/AuthCookieApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samuel\\Desktop\\AuthCookie\\AuthCookieApi\\AuthCookieApi.csproj",
+        "projectUniqueName": "/home/esdras/AuthCookie/AuthCookieApi/AuthCookieApi.csproj",
         "projectName": "AuthCookieApi",
-        "projectPath": "C:\\Users\\Samuel\\Desktop\\AuthCookie\\AuthCookieApi\\AuthCookieApi.csproj",
-        "packagesPath": "C:\\Users\\Samuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samuel\\Desktop\\AuthCookie\\AuthCookieApi\\obj\\",
+        "projectPath": "/home/esdras/AuthCookie/AuthCookieApi/AuthCookieApi.csproj",
+        "packagesPath": "/home/esdras/.nuget/packages/",
+        "outputPath": "/home/esdras/AuthCookie/AuthCookieApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Samuel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/esdras/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -79,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
