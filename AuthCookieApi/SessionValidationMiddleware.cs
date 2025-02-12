@@ -4,7 +4,7 @@ using AuthCookieApi.Data;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 
-namespace AuthCookieApi.Middleware
+namespace AuthCookieApi
 {
     public class SessionValidationMiddleware
     {

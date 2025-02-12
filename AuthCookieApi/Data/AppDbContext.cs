@@ -4,13 +4,14 @@ namespace AuthCookieApi.Data
 {
     public class AppDbContext : DbContext
     {
+        // Construtor que aceita DbContextOptions<AppDbContext>
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+        }
+
         public DbSet<User> Users { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseMySql("server=localhost;database=auth;user=SamuelEsdras;password=05072003",
-                ServerVersion.AutoDetect("server=localhost;database=auth;user=SamuelEsdras;password=05072003"));
-        }
+        // Remova o método OnConfiguring, pois a configuração será feita no Program.cs
     }
 
     public class User

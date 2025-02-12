@@ -1,8 +1,7 @@
 using AuthCookieApi;
+using AuthCookieApi.Data;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
-using AuthCookieApi.Data;
-using AuthCookieApi.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 

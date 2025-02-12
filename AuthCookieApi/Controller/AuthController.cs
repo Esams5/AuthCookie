@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
 using AuthCookieApi.Data;
 
-namespace AuthCookieApi.Controllers
+namespace AuthCookieApi.Controller
 {
     [ApiController]
     [Route("api/auth")]
