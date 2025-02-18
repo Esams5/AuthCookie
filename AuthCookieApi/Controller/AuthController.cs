@@ -48,7 +48,7 @@ namespace AuthCookieApi.Controller
 
             return Unauthorized(new { message = "Invalid credentials" });
         }
-
+        
         [HttpPost("logout")]
         public async Task<IActionResult> Logout()
         {
